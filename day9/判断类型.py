@@ -1,0 +1,1 @@
+print(isinstance("acv",int))
