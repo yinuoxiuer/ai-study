@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="825f6fcd-36a6-4da5-a22f-5cca8d0976fb" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/module/my_module.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/导入模块.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/正则表达式.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/深copy与浅copy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/贪婪.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/判断类型.py" afterDir="false" />
+    <list default="true" id="825f6fcd-36a6-4da5-a22f-5cca8d0976fb" name="更改" comment=" day9">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,27 +35,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.判断类型.executor": "Run",
-    "Python.导入模块.executor": "Run",
-    "Python.正则表达式.executor": "Run",
-    "Python.深copy与浅copy.executor": "Run",
-    "Python.贪婪.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.判断类型.executor&quot;: &quot;Run&quot;,
+    &quot;Python.导入模块.executor&quot;: &quot;Run&quot;,
+    &quot;Python.正则表达式.executor&quot;: &quot;Run&quot;,
+    &quot;Python.深copy与浅copy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.贪婪.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.贪婪">
+}</component>
+  <component name="RunManager">
     <configuration name="正则表达式" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="day9" />
       <option name="ENV_FILES" value="" />
@@ -111,7 +106,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.贪婪" />
         <item itemvalue="Python.正则表达式" />
       </list>
     </recent_temporary>
@@ -132,12 +126,26 @@
       <option name="presentableId" value="Default" />
       <updated>1769336618689</updated>
       <workItem from="1769336619712" duration="20000" />
-      <workItem from="1769336861529" duration="34524000" />
+      <workItem from="1769336861529" duration="35824000" />
+      <workItem from="1769480350408" duration="44000" />
     </task>
+    <task id="LOCAL-00001" summary=" day9">
+      <option name="closed" value="true" />
+      <created>1769440584873</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769440584873</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=" day9" />
+    <option name="LAST_COMMIT_MESSAGE" value=" day9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
