@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="825f6fcd-36a6-4da5-a22f-5cca8d0976fb" name="更改" comment=" day9">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day11/matplotlib_learn.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +129,7 @@
       <workItem from="1769336619712" duration="20000" />
       <workItem from="1769336861529" duration="35824000" />
       <workItem from="1769480350408" duration="44000" />
+      <workItem from="1769511079653" duration="75000" />
     </task>
     <task id="LOCAL-00001" summary=" day9">
       <option name="closed" value="true" />

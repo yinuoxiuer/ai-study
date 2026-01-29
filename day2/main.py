@@ -15,5 +15,12 @@
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
 def myfunc():
+# def 关键字用于定义一个函数。
+# myfunc 是函数的名称。
+# 这个函数没有参数。
  print("hello world")
+# print() 是一个内置函数，用于将文本输出到控制台。
+# "hello world" 是一个字符串字面量，它将被打印到控制台。
 myfunc()
+# 这是对上面定义的 myfunc 函数的调用。
+# 由于 myfunc 不需要任何参数，所以括号是空的。
