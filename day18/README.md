@@ -4,7 +4,7 @@
 
 ## 文件说明
 
-### 1. `deep_learning1.ipynb`
+### 1. `deep_learning_classification.ipynb`
 - **内容**: 深度学习入门笔记本，使用 FashionMNIST 数据集进行图像分类。
 - **功能**:
   - **环境检查**: 检查 PyTorch 及相关库的版本和环境（CUDA/CPU）。
@@ -19,8 +19,14 @@
     - 定义了交叉熵损失函数 (`CrossEntropyLoss`) 和 SGD 优化器。
     - 实现了带有进度条 (`tqdm`) 的训练循环。
     - 包含模型评估函数，计算损失和准确率。
+    - **高级功能**:
+      - **模型保存 (Checkpoints)**: 实现了 `SaveCheckpointsCallback`，支持定期保存和只保存最佳模型。
+      - **早停机制 (Early Stopping)**: 实现了 `EarlyStopCallback`，当验证集指标不再提升时自动停止训练，防止过拟合。
+      - **TensorBoard 支持**: 预留了 TensorBoard 回调接口。
   - **结果可视化**:
     - 绘制训练过程中的损失 (Loss) 和准确率 (Accuracy) 曲线，对比训练集和验证集的表现。
+  - **模型加载与测试**:
+    - 演示了如何加载保存的最佳模型权重 (`best.ckpt`) 并进行最终评估。
 
 ### 2. `pytorch_test.ipynb`
 - **内容**: PyTorch 功能测试与基础神经网络示例。
@@ -49,6 +55,18 @@
 
 建议使用 Jupyter Notebook 或 VS Code 打开 `.ipynb` 文件进行交互式运行和学习。
 
-1.  首先运行 `deep_learning1.ipynb` 中的环境检查代码，确保 CUDA 或 CPU 可用。
+1.  首先运行 `deep_learning_classification.ipynb` 中的环境检查代码，确保 CUDA 或 CPU 可用。
 2.  按顺序执行单元格，观察数据加载、模型构建和训练过程。
-3.  训练完成后，查看生成的 Loss 和 Accuracy 曲线图。
+3.  训练过程中会自动保存模型到 `checkpoints` 文件夹。
+4.  训练完成后，查看生成的 Loss 和 Accuracy 曲线图。
+5.  最后运行模型加载代码，验证最佳模型的性能。
+
+## 关键概念
+
+- **DataLoader**: 数据加载器，负责批量加载数据。
+- **Forward Propagation**: 前向传播，模型根据输入计算输出。
+- **Loss Function**: 损失函数（交叉熵），衡量预测值与真实值的差距。
+- **Backpropagation**: 反向传播，计算梯度。
+- **Optimizer**: 优化器（SGD），根据梯度更新模型参数。
+- **Epoch & Batch**: 训练轮次与批次。
+- **Overfitting**: 过拟合，模型在训练集表现好但在验证集表现差。
