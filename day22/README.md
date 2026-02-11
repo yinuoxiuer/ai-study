@@ -7,6 +7,7 @@
 - `vgg_learn.ipynb`: VGG-11/19 模型的实现。包含 Batch Normalization 优化和全连接层精简。
 - `resnet_learn.ipynb`: ResNet-38 深度残差网络的实现。重点展示了残差连接（Skip Connection）的构建。
 - `inception_learn.ipynb`: InceptionNet 的实现。展示了多尺度卷积核并行提取特征与通道拼接（Concatenation）技术。
+- `2-new_vgg_fine_tuning_2-aliyun.ipynb`: VGG 模型的微调（Fine-tuning）实战。
 - `cifar-10/`: 数据集目录，包含训练集图片、测试集图片及标签文件。
 - `checkpoints/`: 训练过程中保存的最优模型权重（.ckpt 文件）。
 
@@ -21,7 +22,19 @@
 5. **混合精度训练 (AMP)**: 利用 PyTorch 自动混合精度技术，在保持准确率的同时大幅降低显存占用并加速计算。
 6. **Windows 环境适配**: 针对 Windows 下多进程死锁问题，优化了 `DataLoader` 配置（`num_workers=0`）并限制了单线程运行。
 
-## 📈 性能对比
+## 🎯 模型微调 (Fine-tuning) 策略
+
+在 `2-new_vgg_fine_tuning_2-aliyun.ipynb` 中，我们展示了如何对预训练的 VGG 模型进行精细化微调：
+
+1. **差异化学习率 (Differential Learning Rates)**:
+   - **卷积层 (Backbone)**: 使用极小的学习率（如 `1e-4`）。
+   - **分类层 (Classifier)**: 使用较大的学习率（如 `5e-4`）。
+2. **微调效果对比**:
+   - **从零训练 (From Scratch)**: 验证集准确率约 **72.4%** (10 Epochs)。
+   - **精细微调 (Fine-tuned)**: 验证集准确率提升至 **84.8%** (10 Epochs)。
+   - **结论**: 利用预训练权重并配合差异化学习率，可以在极短的时间内获得显著的性能提升。
+
+## 📈 性能对比 (从零训练 50 Epochs)
 
 | 模型 | 改进前版本 (`_learn.ipynb`) | 改进后版本 (`_optimized.ipynb`) | 准确率提升 |
 | :--- | :--- | :--- | :--- |
@@ -30,9 +43,9 @@
 | **Inception** | ~ 75.2% | **~ 85.1%** | **+ 9.9%** |
 
 **核心改进分析:**
-- **VGG**: 加入 **BN 层**、**精简全连接层**、使用 **AdamW** 和 **Kaiming 初始化**，解决了训练不稳和过拟合问题。
-- **ResNet**: 切换到 **AdamW + 余弦退火学习率**，优化策略更平滑、自适应，收敛效果显著提升。
-- **Inception**: **重构了 Inception 模块**，加入“瓶颈”降维设计并修复尺寸匹配问题，使复杂模型得以有效训练。
+- **VGG**: 加入 **BN 层**、**精简全连接层**、使用 **AdamW** 和 **Kaiming 初始化**。
+- **ResNet**: 切换到 **AdamW + 余弦退火学习率**。
+- **Inception**: **重构了 Inception 模块**，加入“瓶颈”降维设计并修复尺寸匹配问题。
 
 ## 🛠 环境要求
 
