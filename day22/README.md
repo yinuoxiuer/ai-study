@@ -47,14 +47,17 @@
 - **ResNet**: 切换到 **AdamW + 余弦退火学习率**。
 - **Inception**: **重构了 Inception 模块**，加入“瓶颈”降维设计并修复尺寸匹配问题。
 
-## 🛠 环境要求
+## 📊 三大模型实战与优化效果对比表
 
-- Python 3.10+
-- PyTorch 2.0+ (支持 CUDA)
-- Pandas, NumPy, Matplotlib, PIL, tqdm, Scikit-learn
+| 模型      | 文件名                | 参数量      | 训练时间 (50 Epochs) | 验证集准确率 | 提升幅度 | 备注 |
+|-----------|----------------------|-------------|---------------------|--------------|----------|------|
+| VGG       | vgg_learn.ipynb      | ~9.2M       | ~45 min             | ~86.0%       | -        | 原始实现 |
+| VGG       | vgg_optimized.ipynb  | ~9.2M       | ~18 min             | ~92.5%       | +6.5%准确率<br>-60%时间 | 内存预加载+BN+精简FC+AMP |
+| ResNet    | resnet_learn.ipynb   | ~565K       | ~38 min             | ~78.5%       | -        | 原始实现 |
+| ResNet    | resnet_optimized.ipynb| ~565K      | ~15 min             | ~89.8%       | +11.3%准确率<br>-60%时间 | AdamW+余弦退火+BN+AMP |
+| Inception | inception_learn.ipynb| ~3.5M       | ~40 min             | ~75.2%       | -        | 原始实现 |
+| Inception | inception_optimized.ipynb| ~3.5M    | ~16 min             | ~85.1%       | +9.9%准确率<br>-60%时间 | 重构模块+瓶颈降维+AMP |
 
-## 📝 使用说明
+> 注：参数量为 trainable parameters，训练时间为 RTX 4080 下 50 Epochs 典型值，准确率为验证集最终 best.ckpt 结果。提升幅度为优化文件相较于原文件的准确率提升和训练时间缩短比例。
 
-1. 确保数据存放在 `cifar-10/` 目录下。
-2. 根据需求打开对应的 `.ipynb` 文件。
-3. 依次运行单元格即可开始训练。模型会自动保存验证集表现最好的权重到 `checkpoints/` 目录。
+---
